@@ -1,0 +1,125 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+    color: #fff;
+    background: #444;
+
+  }
+  
+  .wrapper {
+    display: flex;
+  }
+
+  .nav-lateral{
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    top: 0;
+    left: 0;
+    background: #333;
+    z-index: 10;
+    min-height: 100%;
+  }
+  
+  .nav-lateral header .logo{
+    background: #ddd;
+    text-align: center;
+  }
+  
+  .nav-lateral header .logo img{
+    height: 35px;
+    margin: 5px;
+  }
+  
+  .nav-lateral header h1{
+    width: 100%;
+    margin: 5px 0 5px 0;
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  
+  img.campus{
+    width: 73%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .nav-lateral-lista {
+    margin: 5px;
+    margin-top: 30px;
+    margin-right: 10px;
+    border-radius: 20px;
+    border-width: 1px;
+    border-style: groove;
+    border-color: white;
+  }
+  .nav-lateral-lista ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    padding-right: 6%;
+  }
+
+  .nav-lateral-lista ul a {
+    text-decoration: none;
+    color: white;
+  }
+  .nav-lateral-lista ul li{
+    display: flex;
+    align-items: center;
+    background-color: #555;
+    width: 190px;
+    height: 50px;
+    margin: 5px;
+    padding-left: 10px;
+  }
+  
+  .nav-lateral-lista ul li:hover{
+    background-color: rgb(113, 113, 117);
+  }
+
+  .graficos{
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    background: #444;
+  }
+  
+  .graficos section{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-width: 350px;
+  }
+  
+  .graficos .grafico{
+    background: #222;
+    margin: 15px;
+    padding-bottom: 30px;
+  }
+  
+  .grafico h1{
+    line-height: 40px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 15px;
+    vertical-align: middle;
+    text-align: center;
+  }
+  
+  .grafico h1 .erro{
+    background-color: #f00;
+  }
+  
+  .grafico-container{
+    position: relative;
+  }
+
+  .teste { 
+    position:fixed;
+    width: 35%;
+  }
