@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: arial;
+    font-family: Arial, Helvetica, sans-serif;
     color: #fff;
     background: #444;
 
@@ -47,13 +47,14 @@ body{
   }
 
   .nav-lateral-lista {
-    margin: 5px;
     margin-top: 30px;
     margin-right: 10px;
+    margin-left: 10px;
     border-radius: 20px;
     border-width: 1px;
     border-style: groove;
-    border-color: white;
+    border-color: rgb(85, 85, 85);
+    box-shadow: 2px 2px 10px black;
   }
   .nav-lateral-lista ul {
     display: flex;
@@ -61,6 +62,7 @@ body{
     align-items: center;
     list-style-type: none;
     padding-right: 6%;
+    
   }
 
   .nav-lateral-lista ul a {
@@ -75,10 +77,25 @@ body{
     height: 50px;
     margin: 5px;
     padding-left: 10px;
+    box-shadow: 2px 2px 10px black
   }
   
+  @keyframes hover-li {
+      0%{
+          background-color:  #555;
+          color: white;
+      }  
+      100%{
+        background-color: rgb(208, 208, 208);
+        color: black;
+      }
+  }
+
   .nav-lateral-lista ul li:hover{
-    background-color: rgb(113, 113, 117);
+    background-color: rgb(208, 208, 208);
+    color: black;
+    animation-name: hover-li;
+    animation-duration: 1s;
   }
 
   .graficos{
