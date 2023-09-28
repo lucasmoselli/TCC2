@@ -69,15 +69,27 @@ body{
     text-decoration: none;
     color: white;
   }
+
+  @keyframes unhover-li {
+    0%{
+      background-color: rgb(208, 208, 208);
+      color: black;
+    }
+    100%{
+      background-color:  #555;
+      color: white;
+  } 
+  }
   .nav-lateral-lista ul li{
     display: flex;
     align-items: center;
-    background-color: #555;
     width: 190px;
     height: 50px;
     margin: 5px;
     padding-left: 10px;
-    box-shadow: 2px 2px 10px black
+    box-shadow: 2px 2px 10px black;
+    animation: unhover-li 0.5s;
+    animation-fill-mode: forwards;
   }
   
   @keyframes hover-li {
@@ -92,10 +104,9 @@ body{
   }
 
   .nav-lateral-lista ul li:hover{
-    background-color: rgb(208, 208, 208);
-    color: black;
-    animation-name: hover-li;
-    animation-duration: 1s;
+    animation: hover-li 1s;
+    animation-fill-mode: forwards;
+
   }
 
   .graficos{
