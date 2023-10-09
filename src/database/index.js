@@ -14,3 +14,6 @@ connection.connect(function(err) {
     }
     console.log('Conectado ao banco de dados MySQL!');
   });
+
+
+  module.exports = connection
