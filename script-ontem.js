@@ -32,6 +32,8 @@ fetch('http://localhost:3000/query')
         )
       }
 
+      console.log(global[2])
+
       new Chart(globalChart, {
         type: 'line',
         data: {
