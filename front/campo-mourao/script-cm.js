@@ -1,8 +1,14 @@
 let menu = document.querySelector('.bx-nav');
-let navbar = document.querySelector('.nav-header');
+let navbar = document.querySelector('.nav-lateral');
+let menuCidades = document.querySelector('#bx-cidades')
+let cidades = document.querySelector('.cidades')
 
 menu.onclick = () => {
   navbar.classList.toggle('open');
+}
+
+menuCidades.onclick = () => {
+  cidades.classList.toggle('open')
 }
 
 window.addEventListener('load', function () {

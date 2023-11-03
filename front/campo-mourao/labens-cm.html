@@ -3,10 +3,12 @@
 
 <head>
     <title>LABENS</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="imagens/favicon.png" type="image/png">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
@@ -15,45 +17,55 @@
             <div class="nav-lateral-fixed">
                 <header>
                     <div class="logo">
-                        <a href="http://portal.utfpr.edu.br"><img src="imagens/utfpr-logo.png" alt="Logo UTFPR"
+                        <a href="http://portal.utfpr.edu.br"><img src="../../imagens/utfpr-logo.png" alt="Logo UTFPR"
                                 title="UTFPR"></a>
-                        <a href="http://www.copel.com"><img src="imagens/copel-logo.png" alt="Logo COPEL"
+                        <a href="http://www.copel.com"><img src="../../imagens/copel-logo.png" alt="Logo COPEL"
                                 title="COPEL"></a>
-                        <a href="http://labens.ct.utfpr.edu.br"><img src="imagens/labens-logo.png" alt="Logo LABENS"
+                        <a href="http://labens.ct.utfpr.edu.br"><img src="../../imagens/labens-logo.png" alt="Logo LABENS"
                                 title="LABENS"></a>
                     </div>
-                    <h1><span>Estação de Pesquisa em Energia Solar </span>EPESOL Ponta Grossa</h1>
-                    <img class="campus" src="imagens/estacao-pg.jpg" alt="Vista Usina Campus Ponta Grossa"
-                        title="Vista Usina Campus Ponta Grossa">
+                    <h1><span>Estação de Pesquisa em Energia Solar </span>EPESOL Campo Mourão</h1>
+                    <img class="campus" src="../../imagens/estacao-cm.jpg" alt="Vista Usina Campus Campo Mourão Procópio"
+                        title="Vista Usina Campus Campo Mourão">
                 </header>
-                <div class="nav-lateral-lista">
-                    <ul>
-                        <li id="hoje">Medidas - Hoje</li>
-                        <li id="ontem">Medidas - Ontem</li>
-                        <li id="7dias">Medidas - 7 Dias</li>
-                        <li id="15dias">Medidas - 15 Dias</li>
-                    </ul>
-                </div>
+            </div>
+            <div class="nav-lateral-lista">
+                <ul>
+                    <li id="hoje">Medidas - Hoje</li>
+                    <li id="ontem">Medidas - Ontem</li>
+                    <li id="7dias">Medidas - 7 Dias</li>
+                    <li id="15dias">Medidas - 15 Dias</li>
+                </ul>
             </div>
         </div>
         <div class="container">
+            <div class="bx-header">
+                <div class="bx-nav" id="bx-nav"><span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </div>
+                <div class="bx-nav" id="bx-cidades"><span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </div>
+            </div>
             <div class="cidades">
-                <a href="labens-cp.html">
+                <a href="../cornelio-procopio/labens-cp.html">
                     <div class="cidade">Cornélio Procópio</div>
                 </a>
-                <a href="labens-cm.html">
+                <a href="#">
                     <div class="cidade">Campo Mourão</div>
                 </a>
-                <a href="labens-med.html">
+                <a href="../medianeira/labens-med.html">
                     <div class="cidade">Medianeira</div>
                 </a>
-                <a href="#">
+                <a href="../ponta-grossa/labens-pg.html">
                     <div class="cidade">Ponta Grossa</div>
                 </a>
-                <a href="labens-pb.html">
+                <a href="../pato-branco/labens-pb.html">
                     <div class="cidade">Pato Branco</div>
                 </a>
-                <a href="labens-cwb.html">
+                <a href="../curitiba/labens-cwb.html">
                     <div class="cidade">Curitiba</div>
                 </a>
             </div>
@@ -86,7 +98,7 @@
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
-    <script src="script-cp.js"></script>
+    <script src="script-cm.js"></script>
 </body>
 
 </html>

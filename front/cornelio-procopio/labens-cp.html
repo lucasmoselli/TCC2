@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LABENS</title>
+    <link rel="stylesheet" href="../style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/png">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="nav-lateral">
+            <div class="nav-lateral-fixed">
+                <header>
+                    <div class="logo">
+                        <a href="http://portal.utfpr.edu.br"><img src="../../imagens/utfpr-logo.png" alt="Logo UTFPR"
+                                title="UTFPR"></a>
+                        <a href="http://www.copel.com"><img src="../../imagens/copel-logo.png" alt="Logo COPEL"
+                                title="COPEL"></a>
+                        <a href="http://labens.ct.utfpr.edu.br"><img src="../../imagens/labens-logo.png" alt="Logo LABENS"
+                                title="LABENS"></a>
+                    </div>
+                    <h1><span>Estação de Pesquisa em Energia Solar </span>EPESOL Cornélio Procópio</h1>
+                    <img class="campus" src="../../imagens/estacao-cp.jpg" alt="Vista Usina Campus Cornélio Procópio"
+                        title="Vista Usina Campus Cornélio Procópio">
+                </header>
+            </div>
+            <div class="nav-lateral-lista">
+                <ul>
+                    <li id="hoje">Medidas - Hoje</li>
+                    <li id="ontem">Medidas - Ontem</li>
+                    <li id="7dias">Medidas - 7 Dias</li>
+                    <li id="15dias">Medidas - 15 Dias</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="bx-header">
+            <div class="bx-nav" id="bx-nav"><span class="material-symbols-outlined">
+                    menu
+                </span>
+            </div>
+            <div class="bx-nav" id="bx-cidades"><span class="material-symbols-outlined">
+                    menu
+                </span>
+            </div>
+        </div>
+        <div class="cidades">
+
+            <a href="#">
+                <div class="cidade">Cornélio Procópio</div>
+            </a>
+            <a href="../campo-mourao/labens-cm.html">
+                <div class="cidade">Campo Mourão</div>
+            </a>
+            <a href="../medianeira/labens-med.html">
+                <div class="cidade">Medianeira</div>
+            </a>
+            <a href="../ponta-grossa/labens-pg.html">
+                <div class="cidade">Ponta Grossa</div>
+            </a>
+            <a href="../pato-branco/labens-pb.html">
+                <div class="cidade">Pato Branco</div>
+            </a>
+            <a href="../curitiba/labens-cwb.html">
+                <div class="cidade">Curitiba</div>
+            </a>
+        </div>
+        <div class="graficos">
+            <section>
+                <div class="grafico">
+                    <h1>Global </h1>
+                    <div class="grafico-container"><canvas id="global"></canvas></div>
+                </div>
+            </section>
+            <section>
+                <div class="grafico">
+                    <h1> Inclinado </h1>
+                    <div class="grafico-container"><canvas id="inclinado"></canvas></div>
+                </div>
+            </section>
+            <section>
+                <div class="grafico">
+                    <h1>Temperatura </h1>
+                    <div class="grafico-container"><canvas id="temperatura"></canvas></div>
+                </div>
+            </section>
+            <section>
+                <div class="grafico">
+                    <h1>Velocidade do Vento</h1>
+                    <div class="grafico-container"><canvas id="velocidadeVento"></canvas></div>
+                </div>
+            </section>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+    <script src="script-cp.js"></script>
+</body>
+
+</html>
