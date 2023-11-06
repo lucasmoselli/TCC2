@@ -2,6 +2,15 @@ let menu = document.querySelector('.bx-nav');
 let navbar = document.querySelector('.nav-lateral');
 let menuCidades = document.querySelector('#bx-cidades')
 let cidades = document.querySelector('.cidades')
+var globalChart = document.getElementById('global');
+var inclinadoChart = document.getElementById('inclinado');
+var temperaturaChart = document.getElementById('temperatura');
+var velocidadeVentoChart = document.getElementById('velocidadeVento');
+
+let globall = 0
+let inclinad = 0
+let temp = 0
+let velocidade = 0
 
 menu.onclick = () => {
   navbar.classList.toggle('open');
@@ -12,10 +21,10 @@ menuCidades.onclick = () => {
 }
 
 window.addEventListener('load', function () {
-  var globalChart = document.getElementById('global');
-  var inclinadoChart = document.getElementById('inclinado');
-  var temperaturaChart = document.getElementById('temperatura');
-  var velocidadeVentoChart = document.getElementById('velocidadeVento');
+  globalChart.innerHTML = ""
+  inclinadoChart.innerHTML = ""
+  temperaturaChart.innerHTML = ""
+  velocidadeVentoChart.innerHTML = ""
 
   fetch('http://localhost:3000/query')
     .then(response => {
@@ -45,7 +54,7 @@ window.addEventListener('load', function () {
 
         console.log(global[2])
 
-        new Chart(globalChart, {
+        globall = new Chart(globalChart, {
           type: 'line',
           data: {
             labels: horas,
@@ -56,8 +65,8 @@ window.addEventListener('load', function () {
                 borderColor: 'orange',
                 backgroundColor: 'orange',
                 data: global,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -81,7 +90,7 @@ window.addEventListener('load', function () {
           }
         });
 
-        new Chart(temperaturaChart, {
+        temp = new Chart(temperaturaChart, {
           type: 'line',
           data: {
             labels: horas,
@@ -92,8 +101,8 @@ window.addEventListener('load', function () {
                 borderColor: 'yellow',
                 backgroundColor: 'yellow',
                 data: temperatura,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -116,7 +125,7 @@ window.addEventListener('load', function () {
             maintainAspectRatio: false,
           }
         });
-        new Chart(inclinadoChart, {
+        inclinad = new Chart(inclinadoChart, {
           type: 'line',
           data: {
             labels: horas,
@@ -127,8 +136,8 @@ window.addEventListener('load', function () {
                 borderColor: 'red',
                 backgroundColor: 'red',
                 data: inclinado,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -151,7 +160,7 @@ window.addEventListener('load', function () {
             maintainAspectRatio: false,
           }
         });
-        new Chart(velocidadeVentoChart, {
+        velocidade = new Chart(velocidadeVentoChart, {
           type: 'line',
           data: {
             labels: horas,
@@ -162,8 +171,8 @@ window.addEventListener('load', function () {
                 borderColor: 'lightblue',
                 backgroundColor: 'lightblue',
                 data: velocidadeVento,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -197,10 +206,10 @@ window.addEventListener('load', function () {
 })
 
 const hoje = document.getElementById('hoje').addEventListener('click', function () {
-  var globalChart = document.getElementById('global');
-  var inclinadoChart = document.getElementById('inclinado');
-  var temperaturaChart = document.getElementById('temperatura');
-  var velocidadeVentoChart = document.getElementById('velocidadeVento');
+  globall.destroy()
+  inclinad.destroy()
+  temp.destroy()
+  velocidade.destroy()
 
   fetch('http://localhost:3000/query')
     .then(response => {
@@ -211,7 +220,7 @@ const hoje = document.getElementById('hoje').addEventListener('click', function 
     })
     .then(data => {
       if (data) {
-        console.log(data[1]);
+        console.log(data);
 
         let horas = [];
         let global = [];
@@ -230,7 +239,7 @@ const hoje = document.getElementById('hoje').addEventListener('click', function 
 
         console.log(global[2])
 
-        new Chart(globalChart, {
+        globall = new Chart(globalChart, {
           type: 'line',
           data: {
             labels: horas,
@@ -241,8 +250,8 @@ const hoje = document.getElementById('hoje').addEventListener('click', function 
                 borderColor: 'orange',
                 backgroundColor: 'orange',
                 data: global,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -266,7 +275,7 @@ const hoje = document.getElementById('hoje').addEventListener('click', function 
           }
         });
 
-        new Chart(temperaturaChart, {
+        temp = new Chart(temperaturaChart, {
           type: 'line',
           data: {
             labels: horas,
@@ -277,8 +286,8 @@ const hoje = document.getElementById('hoje').addEventListener('click', function 
                 borderColor: 'yellow',
                 backgroundColor: 'yellow',
                 data: temperatura,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -301,7 +310,7 @@ const hoje = document.getElementById('hoje').addEventListener('click', function 
             maintainAspectRatio: false,
           }
         });
-        new Chart(inclinadoChart, {
+        inclinad = new Chart(inclinadoChart, {
           type: 'line',
           data: {
             labels: horas,
@@ -312,8 +321,8 @@ const hoje = document.getElementById('hoje').addEventListener('click', function 
                 borderColor: 'red',
                 backgroundColor: 'red',
                 data: inclinado,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -336,7 +345,7 @@ const hoje = document.getElementById('hoje').addEventListener('click', function 
             maintainAspectRatio: false,
           }
         });
-        new Chart(velocidadeVentoChart, {
+        velocidade = new Chart(velocidadeVentoChart, {
           type: 'line',
           data: {
             labels: horas,
@@ -347,8 +356,8 @@ const hoje = document.getElementById('hoje').addEventListener('click', function 
                 borderColor: 'lightblue',
                 backgroundColor: 'lightblue',
                 data: velocidadeVento,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -382,12 +391,12 @@ const hoje = document.getElementById('hoje').addEventListener('click', function 
 })
 
 const ontem = document.getElementById('ontem').addEventListener('click', function () {
-  var globalChart = document.getElementById('global');
-  var inclinadoChart = document.getElementById('inclinado');
-  var temperaturaChart = document.getElementById('temperatura');
-  var velocidadeVentoChart = document.getElementById('velocidadeVento');
+  globall.destroy()
+  inclinad.destroy()
+  temp.destroy()
+  velocidade.destroy()
 
-  fetch('http://localhost:3000/query')
+  fetch('http://localhost:3000/query4')
     .then(response => {
       if (!response.ok) {
         throw new Error('Erro na solicitação');
@@ -396,7 +405,7 @@ const ontem = document.getElementById('ontem').addEventListener('click', functio
     })
     .then(data => {
       if (data) {
-        console.log(data[1]);
+        console.log(data);
 
         let horas = [];
         let global = [];
@@ -404,7 +413,7 @@ const ontem = document.getElementById('ontem').addEventListener('click', functio
         let temperatura = [];
         let velocidadeVento = []
 
-        for (var i = 0; i < 24; i++) {
+        for (var i = 0; i < data.length; i++) {
           horas.push(data[i].time_stamp);
           global.push(data[i].glo_avg_ep01CP_Media)
           inclinado.push(data[i].tilt_avg_ep01CP_Media)
@@ -415,7 +424,7 @@ const ontem = document.getElementById('ontem').addEventListener('click', functio
 
         console.log(global[2])
 
-        new Chart(globalChart, {
+        globall = new Chart(globalChart, {
           type: 'line',
           data: {
             labels: horas,
@@ -426,8 +435,8 @@ const ontem = document.getElementById('ontem').addEventListener('click', functio
                 borderColor: 'orange',
                 backgroundColor: 'orange',
                 data: global,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -451,7 +460,7 @@ const ontem = document.getElementById('ontem').addEventListener('click', functio
           }
         });
 
-        new Chart(temperaturaChart, {
+        temp = new Chart(temperaturaChart, {
           type: 'line',
           data: {
             labels: horas,
@@ -462,8 +471,8 @@ const ontem = document.getElementById('ontem').addEventListener('click', functio
                 borderColor: 'yellow',
                 backgroundColor: 'yellow',
                 data: temperatura,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -486,7 +495,7 @@ const ontem = document.getElementById('ontem').addEventListener('click', functio
             maintainAspectRatio: false,
           }
         });
-        new Chart(inclinadoChart, {
+        inclinad = new Chart(inclinadoChart, {
           type: 'line',
           data: {
             labels: horas,
@@ -497,8 +506,8 @@ const ontem = document.getElementById('ontem').addEventListener('click', functio
                 borderColor: 'red',
                 backgroundColor: 'red',
                 data: inclinado,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -521,7 +530,7 @@ const ontem = document.getElementById('ontem').addEventListener('click', functio
             maintainAspectRatio: false,
           }
         });
-        new Chart(velocidadeVentoChart, {
+        velocidade = new Chart(velocidadeVentoChart, {
           type: 'line',
           data: {
             labels: horas,
@@ -532,8 +541,8 @@ const ontem = document.getElementById('ontem').addEventListener('click', functio
                 borderColor: 'lightblue',
                 backgroundColor: 'lightblue',
                 data: velocidadeVento,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -567,10 +576,10 @@ const ontem = document.getElementById('ontem').addEventListener('click', functio
 })
 
 const dias7 = document.getElementById('7dias').addEventListener('click', function () {
-  var globalChart = document.getElementById('global');
-  var inclinadoChart = document.getElementById('inclinado');
-  var temperaturaChart = document.getElementById('temperatura');
-  var velocidadeVentoChart = document.getElementById('velocidadeVento');
+  globall.destroy()
+  inclinad.destroy()
+  temp.destroy()
+  velocidade.destroy()
 
   fetch('http://localhost:3000/query2')
     .then(response => {
@@ -581,7 +590,7 @@ const dias7 = document.getElementById('7dias').addEventListener('click', functio
     })
     .then(data => {
       if (data) {
-        console.log(data[1]);
+        console.log(data);
 
         let horas = [];
         let global = [];
@@ -589,7 +598,7 @@ const dias7 = document.getElementById('7dias').addEventListener('click', functio
         let temperatura = [];
         let velocidadeVento = []
 
-        for (var i = 0; i < 7; i++) {
+        for (var i = 0; i < data.length; i++) {
           horas.push(data[i].time_stamp);
           global.push(data[i].glo_avg_ep01CP_Media)
           inclinado.push(data[i].tilt_avg_ep01CP_Media)
@@ -598,7 +607,7 @@ const dias7 = document.getElementById('7dias').addEventListener('click', functio
           )
         }
 
-        new Chart(globalChart, {
+        globall = new Chart(globalChart, {
           type: 'line',
           data: {
             labels: horas,
@@ -609,8 +618,8 @@ const dias7 = document.getElementById('7dias').addEventListener('click', functio
                 borderColor: 'orange',
                 backgroundColor: 'orange',
                 data: global,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -634,7 +643,7 @@ const dias7 = document.getElementById('7dias').addEventListener('click', functio
           }
         });
 
-        new Chart(temperaturaChart, {
+        temp = new Chart(temperaturaChart, {
           type: 'line',
           data: {
             labels: horas,
@@ -645,8 +654,8 @@ const dias7 = document.getElementById('7dias').addEventListener('click', functio
                 borderColor: 'yellow',
                 backgroundColor: 'yellow',
                 data: temperatura,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -669,7 +678,7 @@ const dias7 = document.getElementById('7dias').addEventListener('click', functio
             maintainAspectRatio: false,
           }
         });
-        new Chart(inclinadoChart, {
+        inclinad = new Chart(inclinadoChart, {
           type: 'line',
           data: {
             labels: horas,
@@ -680,8 +689,8 @@ const dias7 = document.getElementById('7dias').addEventListener('click', functio
                 borderColor: 'red',
                 backgroundColor: 'red',
                 data: inclinado,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -704,7 +713,7 @@ const dias7 = document.getElementById('7dias').addEventListener('click', functio
             maintainAspectRatio: false,
           }
         });
-        new Chart(velocidadeVentoChart, {
+        velocidade = new Chart(velocidadeVentoChart, {
           type: 'line',
           data: {
             labels: horas,
@@ -715,8 +724,8 @@ const dias7 = document.getElementById('7dias').addEventListener('click', functio
                 borderColor: 'lightblue',
                 backgroundColor: 'lightblue',
                 data: velocidadeVento,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -750,12 +759,10 @@ const dias7 = document.getElementById('7dias').addEventListener('click', functio
 })
 
 const dias15 = document.getElementById('15dias').addEventListener('click', function () {
-  var globalChart = document.getElementById('global');
-  var inclinadoChart = document.getElementById('inclinado');
-  var temperaturaChart = document.getElementById('temperatura');
-  var velocidadeVentoChart = document.getElementById('velocidadeVento');
-
-  console.log('teste')
+  globall.destroy()
+  inclinad.destroy()
+  temp.destroy()
+  velocidade.destroy()
   fetch('http://localhost:3000/query3')
     .then(response => {
       if (!response.ok) {
@@ -765,21 +772,23 @@ const dias15 = document.getElementById('15dias').addEventListener('click', funct
     })
     .then(data => {
       if (data) {
-        console.log(data[1]);
+        console.log(data[-1]);
 
         let horas = [];
         let global = [];
         let inclinado = [];
         let temperatura = [];
+        let velocidadeVento = [];
 
-        for (var i = 0; i < 15; i++) {
+        for (var i = 0; i < data.length; i++) {
           horas.push(data[i].time_stamp);
           global.push(data[i].glo_avg_ep01CP_Media)
           inclinado.push(data[i].tilt_avg_ep01CP_Media)
           temperatura.push(data[i].tp_sfc_ep10CP_Media)
+          velocidadeVento.push(data[i].ws_avg_ep10CP_Media)
         }
 
-        new Chart(globalChart, {
+        globall = new Chart(globalChart, {
           type: 'line',
           data: {
             labels: horas,
@@ -815,7 +824,42 @@ const dias15 = document.getElementById('15dias').addEventListener('click', funct
           }
         });
 
-        new Chart(temperaturaChart, {
+        velocidade = new Chart(velocidadeVentoChart, {
+          type: 'line',
+          data: {
+            labels: horas,
+            datasets: [
+              {
+                label: 'Temperatura',
+                fill: false,
+                borderColor: 'lightblue',
+                backgroundColor: 'lightblue',
+                data: velocidadeVento,
+                pointRadius: 2,
+                borderWidth: 3
+              },
+            ]
+          },
+          options: {
+            scales: {
+              xAxes: [{
+                scaleLabel: {
+                  display: true,
+                  labelString: 'Dia e Hora (UTC-3)'
+                }
+              }],
+              yAxes: [{
+                scaleLabel: {
+                  display: true,
+                  labelString: 'Velocidade (m/s)'
+                }
+              }]
+            },
+            aspectRatio: 1,
+            maintainAspectRatio: false,
+          }
+        });
+        temp = new Chart(temperaturaChart, {
           type: 'line',
           data: {
             labels: horas,
@@ -850,7 +894,7 @@ const dias15 = document.getElementById('15dias').addEventListener('click', funct
             maintainAspectRatio: false,
           }
         });
-        new Chart(inclinadoChart, {
+        inclinad = new Chart(inclinadoChart, {
           type: 'line',
           data: {
             labels: horas,

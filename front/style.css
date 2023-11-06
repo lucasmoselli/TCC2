@@ -16,7 +16,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  width: 30%;
+  width: 456px;
   background: #333;
   z-index: 10;
 }
@@ -121,7 +121,7 @@ img.campus {
 }
 
 
-.cidades > a {
+.cidades>a {
   text-decoration: none;
   color: white;
   text-align: center;

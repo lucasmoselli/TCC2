@@ -25,7 +25,6 @@ window.addEventListener('load', function () {
     })
     .then(data => {
       if (data) {
-        console.log(data[1]);
 
         let horas = [];
         let global = [];
@@ -35,14 +34,12 @@ window.addEventListener('load', function () {
 
         for (var i = 0; i < 24; i++) {
           horas.push(data[i].time_stamp);
-          global.push(data[i].glo_avg_ep01CP_Media)
-          inclinado.push(data[i].tilt_avg_ep01CP_Media)
-          temperatura.push(data[i].tp_sfc_ep10CP_Media)
-          velocidadeVento.push(data[i].ws_avg_ep10CP_Media
+          global.push(data[i].glo_avg_ep01PG_Media)
+          inclinado.push(data[i].tilt_avg_ep01PG_Media)
+          temperatura.push(data[i].tp_sfc_ep10PG_Media)
+          velocidadeVento.push(data[i].ws_avg_ep10PG_Media
           )
         }
-
-        console.log(global[2])
 
         new Chart(globalChart, {
           type: 'line',
@@ -55,8 +52,8 @@ window.addEventListener('load', function () {
                 borderColor: 'orange',
                 backgroundColor: 'orange',
                 data: global,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -91,8 +88,8 @@ window.addEventListener('load', function () {
                 borderColor: 'yellow',
                 backgroundColor: 'yellow',
                 data: temperatura,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -126,8 +123,8 @@ window.addEventListener('load', function () {
                 borderColor: 'red',
                 backgroundColor: 'red',
                 data: inclinado,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -161,8 +158,8 @@ window.addEventListener('load', function () {
                 borderColor: 'lightblue',
                 backgroundColor: 'lightblue',
                 data: velocidadeVento,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -210,7 +207,6 @@ const hoje = document.getElementById('hoje').addEventListener('click', function 
     })
     .then(data => {
       if (data) {
-        console.log(data[1]);
 
         let horas = [];
         let global = [];
@@ -220,14 +216,12 @@ const hoje = document.getElementById('hoje').addEventListener('click', function 
 
         for (var i = 0; i < 24; i++) {
           horas.push(data[i].time_stamp);
-          global.push(data[i].glo_avg_ep01CP_Media)
-          inclinado.push(data[i].tilt_avg_ep01CP_Media)
-          temperatura.push(data[i].tp_sfc_ep10CP_Media)
-          velocidadeVento.push(data[i].ws_avg_ep10CP_Media
+          global.push(data[i].glo_avg_ep01PG_Media)
+          inclinado.push(data[i].tilt_avg_ep01PG_Media)
+          temperatura.push(data[i].tp_sfc_ep10PG_Media)
+          velocidadeVento.push(data[i].ws_avg_ep10PG_Media
           )
         }
-
-        console.log(global[2])
 
         new Chart(globalChart, {
           type: 'line',
@@ -240,8 +234,8 @@ const hoje = document.getElementById('hoje').addEventListener('click', function 
                 borderColor: 'orange',
                 backgroundColor: 'orange',
                 data: global,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -276,8 +270,8 @@ const hoje = document.getElementById('hoje').addEventListener('click', function 
                 borderColor: 'yellow',
                 backgroundColor: 'yellow',
                 data: temperatura,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -311,8 +305,8 @@ const hoje = document.getElementById('hoje').addEventListener('click', function 
                 borderColor: 'red',
                 backgroundColor: 'red',
                 data: inclinado,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -346,8 +340,8 @@ const hoje = document.getElementById('hoje').addEventListener('click', function 
                 borderColor: 'lightblue',
                 backgroundColor: 'lightblue',
                 data: velocidadeVento,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -395,7 +389,6 @@ const ontem = document.getElementById('ontem').addEventListener('click', functio
     })
     .then(data => {
       if (data) {
-        console.log(data[1]);
 
         let horas = [];
         let global = [];
@@ -405,14 +398,12 @@ const ontem = document.getElementById('ontem').addEventListener('click', functio
 
         for (var i = 0; i < 24; i++) {
           horas.push(data[i].time_stamp);
-          global.push(data[i].glo_avg_ep01CP_Media)
-          inclinado.push(data[i].tilt_avg_ep01CP_Media)
-          temperatura.push(data[i].tp_sfc_ep10CP_Media)
-          velocidadeVento.push(data[i].ws_avg_ep10CP_Media
+          global.push(data[i].glo_avg_ep01PG_Media)
+          inclinado.push(data[i].tilt_avg_ep01PG_Media)
+          temperatura.push(data[i].tp_sfc_ep10PG_Media)
+          velocidadeVento.push(data[i].ws_avg_ep10PG_Media
           )
         }
-
-        console.log(global[2])
 
         new Chart(globalChart, {
           type: 'line',
@@ -425,8 +416,8 @@ const ontem = document.getElementById('ontem').addEventListener('click', functio
                 borderColor: 'orange',
                 backgroundColor: 'orange',
                 data: global,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -461,8 +452,8 @@ const ontem = document.getElementById('ontem').addEventListener('click', functio
                 borderColor: 'yellow',
                 backgroundColor: 'yellow',
                 data: temperatura,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -496,8 +487,8 @@ const ontem = document.getElementById('ontem').addEventListener('click', functio
                 borderColor: 'red',
                 backgroundColor: 'red',
                 data: inclinado,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -531,8 +522,8 @@ const ontem = document.getElementById('ontem').addEventListener('click', functio
                 borderColor: 'lightblue',
                 backgroundColor: 'lightblue',
                 data: velocidadeVento,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -580,7 +571,6 @@ const dias7 = document.getElementById('7dias').addEventListener('click', functio
     })
     .then(data => {
       if (data) {
-        console.log(data[1]);
 
         let horas = [];
         let global = [];
@@ -590,10 +580,10 @@ const dias7 = document.getElementById('7dias').addEventListener('click', functio
 
         for (var i = 0; i < 7; i++) {
           horas.push(data[i].time_stamp);
-          global.push(data[i].glo_avg_ep01CP_Media)
-          inclinado.push(data[i].tilt_avg_ep01CP_Media)
-          temperatura.push(data[i].tp_sfc_ep10CP_Media)
-          velocidadeVento.push(data[i].ws_avg_ep10CP_Media
+          global.push(data[i].glo_avg_ep01PG_Media)
+          inclinado.push(data[i].tilt_avg_ep01PG_Media)
+          temperatura.push(data[i].tp_sfc_ep10PG_Media)
+          velocidadeVento.push(data[i].ws_avg_ep10PG_Media
           )
         }
 
@@ -608,8 +598,8 @@ const dias7 = document.getElementById('7dias').addEventListener('click', functio
                 borderColor: 'orange',
                 backgroundColor: 'orange',
                 data: global,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -644,8 +634,8 @@ const dias7 = document.getElementById('7dias').addEventListener('click', functio
                 borderColor: 'yellow',
                 backgroundColor: 'yellow',
                 data: temperatura,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -679,8 +669,8 @@ const dias7 = document.getElementById('7dias').addEventListener('click', functio
                 borderColor: 'red',
                 backgroundColor: 'red',
                 data: inclinado,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -714,8 +704,8 @@ const dias7 = document.getElementById('7dias').addEventListener('click', functio
                 borderColor: 'lightblue',
                 backgroundColor: 'lightblue',
                 data: velocidadeVento,
-                pointRadius: 0,
-                borderWidth: 2
+                pointRadius: 2,
+                borderWidth: 3
               },
             ]
           },
@@ -754,7 +744,6 @@ const dias15 = document.getElementById('15dias').addEventListener('click', funct
   var temperaturaChart = document.getElementById('temperatura');
   var velocidadeVentoChart = document.getElementById('velocidadeVento');
 
-  console.log('teste')
   fetch('http://localhost:3000/query3')
     .then(response => {
       if (!response.ok) {
@@ -764,18 +753,19 @@ const dias15 = document.getElementById('15dias').addEventListener('click', funct
     })
     .then(data => {
       if (data) {
-        console.log(data[1]);
 
         let horas = [];
         let global = [];
         let inclinado = [];
         let temperatura = [];
+        let velocidadeVento = [];
 
         for (var i = 0; i < 15; i++) {
           horas.push(data[i].time_stamp);
-          global.push(data[i].glo_avg_ep01CP_Media)
-          inclinado.push(data[i].tilt_avg_ep01CP_Media)
-          temperatura.push(data[i].tp_sfc_ep10CP_Media)
+          global.push(data[i].glo_avg_ep01PG_Media)
+          inclinado.push(data[i].tilt_avg_ep01PG_Media)
+          temperatura.push(data[i].tp_sfc_ep10PG_Media)
+          velocidadeVento.push(data[i].ws_avg_ep10PG_Media)
         }
 
         new Chart(globalChart, {
@@ -842,6 +832,41 @@ const dias15 = document.getElementById('15dias').addEventListener('click', funct
                 scaleLabel: {
                   display: true,
                   labelString: 'Temperatura (Celsius)'
+                }
+              }]
+            },
+            aspectRatio: 1,
+            maintainAspectRatio: false,
+          }
+        });
+        new Chart(velocidadeVentoChart, {
+          type: 'line',
+          data: {
+            labels: horas,
+            datasets: [
+              {
+                label: 'Velocidade do Vento',
+                fill: false,
+                borderColor: 'lightblue',
+                backgroundColor: 'lightblue',
+                data: velocidadeVento,
+                pointRadius: 2,
+                borderWidth: 3
+              },
+            ]
+          },
+          options: {
+            scales: {
+              xAxes: [{
+                scaleLabel: {
+                  display: true,
+                  labelString: 'Dia e Hora (UTC-3)'
+                }
+              }],
+              yAxes: [{
+                scaleLabel: {
+                  display: true,
+                  labelString: 'Velocidade (m/s)'
                 }
               }]
             },
