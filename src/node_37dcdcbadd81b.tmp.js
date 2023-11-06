@@ -36,7 +36,7 @@ app.get('/query4', function (req, res) {
 
 app.get('/query2', function (req, res) {
     //let sql = "SELECT * FROM dados_labens WHERE time_stamp >= DATE_SUB(CURDATE(), INTERVAL 1 YEAR) AND time_stamp < DATE_SUB(CURDATE(), INTERVAL 1 MONTH);"
-    let sql = "SELECT * FROM dados_labens WHERE time_stamp BETWEEN '2020-04-03' AND '2020-04-11';"
+    let sql = "SELECT * FROM dados_labens WHERE time_stamp BETWEEN '2020-04-10' AND '2020-04-17';"
 
     connection.query(sql, function (err, results) {
         if (err) {
@@ -49,7 +49,7 @@ app.get('/query2', function (req, res) {
 
 
 app.get('/query3', function (req, res) {
-    let sql = "SELECT * FROM dados_labens WHERE time_stamp BETWEEN '2020-04-03' AND '2020-04-18';"
+    let sql = "SELECT * FROM dados_labens WHERE time_stamp BETWEEN '2020-03-26' AND '2020-04-10';"
     // let sql = "SELECT * FROM dados_labens"
 
     connection.query(sql, function (err, results) {
