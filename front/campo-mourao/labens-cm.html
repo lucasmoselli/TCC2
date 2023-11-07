@@ -36,6 +36,15 @@
                     <li id="7dias">Medidas - 7 Dias</li>
                     <li id="15dias">Medidas - 15 Dias</li>
                 </ul>
+                <div id="custom">
+                    <div>
+                        <label for="data-inicial">Data inicial:</label><input type="datetime-local" name="data-inicial" id="data-inicial" max="2023-11-07T00:00" min="2020-06-01T00:00">
+                    </div>
+                    <div>
+                        <label for="data-final">Data final:</label><input type="datetime-local" name="data-final" id="data-final" max="2023-11-07T00:00" min="2020-06-01T00:00">
+                    </div>
+                    <button type="button" id="submit">Procurar</button>
+                </div>
             </div>
         </div>
         <div class="container">
@@ -84,6 +93,30 @@
                 </section>
                 <section>
                     <div class="grafico">
+                        <h1> Difuso </h1>
+                        <div class="grafico-container"><canvas id="difuso"></canvas></div>
+                    </div>
+                </section>
+                <section>
+                    <div class="grafico">
+                        <h1> Direto </h1>
+                        <div class="grafico-container"><canvas id="direto"></canvas></div>
+                    </div>
+                </section>
+                <section>
+                    <div class="grafico">
+                        <h1> Paralelo </h1>
+                        <div class="grafico-container"><canvas id="paralelo"></canvas></div>
+                    </div>
+                </section>
+                <section>
+                    <div class="grafico">
+                        <h1> Ondas Longas </h1>
+                        <div class="grafico-container"><canvas id="ondas-longas"></canvas></div>
+                    </div>
+                </section>
+                <section>
+                    <div class="grafico">
                         <h1>Temperatura </h1>
                         <div class="grafico-container"><canvas id="temperatura"></canvas></div>
                     </div>
@@ -92,6 +125,12 @@
                     <div class="grafico">
                         <h1>Velocidade do Vento</h1>
                         <div class="grafico-container"><canvas id="velocidadeVento"></canvas></div>
+                    </div>
+                </section>
+                <section>
+                    <div class="grafico">
+                        <h1> Pluviosidade do Dia</h1>
+                        <div class="grafico-container"><canvas id="chuva"></canvas></div>
                     </div>
                 </section>
             </div>

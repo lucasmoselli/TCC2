@@ -47,7 +47,7 @@ img.campus {
 }
 
 .nav-lateral-lista {
-  margin-top: 30px;
+  margin-top: 15px;
   margin-right: 10px;
   margin-left: 10px;
   border-radius: 20px;
@@ -199,6 +199,33 @@ img.campus {
   width: 90%;
 }
 
+#custom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#custom > div {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  width: 100%;
+  padding-left: 150px;
+}
+
+#custom > div > label {
+  width: 100px;
+}
+
+#custom > div > input {
+  width: 150px;
+}
+
+#custom > button {
+  margin-bottom: 5px;
+}
+
 @media screen and (max-width: 1300px) {
   .nav-lateral {
     width: 0;
@@ -220,6 +247,10 @@ img.campus {
 
   .bx-nav {
     display: block;
+  }
+
+  #bx-cidades {
+    display: none;
   }
 
   .nav-lateral-lista {
@@ -244,6 +275,10 @@ img.campus {
 
   .bx-nav span {
     font-size: 40px;
+  }
+
+  #custom > div > input {
+    width: 100px;
   }
 
 }
