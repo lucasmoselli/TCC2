@@ -33,7 +33,6 @@ window.addEventListener('load', function () {
     })
     .then(data => {
       if (data) {
-        console.log(data[1]);
 
         let horas = [];
         let global = [];
@@ -49,8 +48,6 @@ window.addEventListener('load', function () {
           velocidadeVento.push(data[i].ws_avg_ep10CP_Media
           )
         }
-
-        console.log(global[2])
 
         globalGrafico = new Chart(globalChart, {
           type: 'line',
