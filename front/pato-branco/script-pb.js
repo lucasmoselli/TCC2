@@ -33,7 +33,6 @@ window.addEventListener('load', function () {
     })
     .then(data => {
       if (data) {
-        console.log(data[1]);
 
         let horas = [];
         let global = [];
@@ -50,15 +49,13 @@ window.addEventListener('load', function () {
           )
         }
 
-        console.log(global[2])
-
         globalGrafico = new Chart(globalChart, {
           type: 'line',
           data: {
             labels: horas,
             datasets: [
               {
-                label: 'Global',
+                label: 'Global Horizontal',
                 fill: false,
                 borderColor: 'orange',
                 backgroundColor: 'orange',
@@ -79,7 +76,7 @@ window.addEventListener('load', function () {
               yAxes: [{
                 scaleLabel: {
                   display: true,
-                  labelString: 'Potência (W)'
+                  labelString: 'Irradiância (W/m²)'
                 }
               }]
             },
@@ -129,7 +126,7 @@ window.addEventListener('load', function () {
             labels: horas,
             datasets: [
               {
-                label: 'Inclinado',
+                label: 'Plano Inclinado',
                 fill: false,
                 borderColor: 'red',
                 backgroundColor: 'red',
@@ -150,7 +147,7 @@ window.addEventListener('load', function () {
               yAxes: [{
                 scaleLabel: {
                   display: true,
-                  labelString: 'Potência (W)'
+                  labelString: 'Irradiância (W/m²)'
                 }
               }]
             },
@@ -164,7 +161,7 @@ window.addEventListener('load', function () {
             labels: horas,
             datasets: [
               {
-                label: 'Inclinado',
+                label: 'Velocidade do Vento',
                 fill: false,
                 borderColor: 'lightblue',
                 backgroundColor: 'lightblue',
@@ -218,7 +215,6 @@ const hoje = document.getElementById('hoje').addEventListener('click', function 
     })
     .then(data => {
       if (data) {
-        console.log(data[1]);
 
         let horas = [];
         let global = [];
@@ -235,15 +231,13 @@ const hoje = document.getElementById('hoje').addEventListener('click', function 
           )
         }
 
-        console.log(global[2])
-
         globalGrafico = new Chart(globalChart, {
           type: 'line',
           data: {
             labels: horas,
             datasets: [
               {
-                label: 'Global',
+                label: 'Global Horizontal',
                 fill: false,
                 borderColor: 'orange',
                 backgroundColor: 'orange',
@@ -264,7 +258,7 @@ const hoje = document.getElementById('hoje').addEventListener('click', function 
               yAxes: [{
                 scaleLabel: {
                   display: true,
-                  labelString: 'Potência (W)'
+                  labelString: 'Irradiância (W/m²)'
                 }
               }]
             },
@@ -314,7 +308,7 @@ const hoje = document.getElementById('hoje').addEventListener('click', function 
             labels: horas,
             datasets: [
               {
-                label: 'Inclinado',
+                label: 'Plano Inclinado',
                 fill: false,
                 borderColor: 'red',
                 backgroundColor: 'red',
@@ -335,7 +329,7 @@ const hoje = document.getElementById('hoje').addEventListener('click', function 
               yAxes: [{
                 scaleLabel: {
                   display: true,
-                  labelString: 'Potência (W)'
+                  labelString: 'Irradiância (W/m²)'
                 }
               }]
             },
@@ -349,7 +343,7 @@ const hoje = document.getElementById('hoje').addEventListener('click', function 
             labels: horas,
             datasets: [
               {
-                label: 'Inclinado',
+                label: 'Velocidade do Vento',
                 fill: false,
                 borderColor: 'lightblue',
                 backgroundColor: 'lightblue',
@@ -403,7 +397,6 @@ const ontem = document.getElementById('ontem').addEventListener('click', functio
     })
     .then(data => {
       if (data) {
-        console.log(data[1]);
 
         let horas = [];
         let global = [];
@@ -420,15 +413,13 @@ const ontem = document.getElementById('ontem').addEventListener('click', functio
           )
         }
 
-        console.log(global[2])
-
         globalGrafico = new Chart(globalChart, {
           type: 'line',
           data: {
             labels: horas,
             datasets: [
               {
-                label: 'Global',
+                label: 'Global Horizontal',
                 fill: false,
                 borderColor: 'orange',
                 backgroundColor: 'orange',
@@ -449,7 +440,7 @@ const ontem = document.getElementById('ontem').addEventListener('click', functio
               yAxes: [{
                 scaleLabel: {
                   display: true,
-                  labelString: 'Potência (W)'
+                  labelString: 'Irradiância (W/m²)'
                 }
               }]
             },
@@ -499,7 +490,7 @@ const ontem = document.getElementById('ontem').addEventListener('click', functio
             labels: horas,
             datasets: [
               {
-                label: 'Inclinado',
+                label: 'Plano Inclinado',
                 fill: false,
                 borderColor: 'red',
                 backgroundColor: 'red',
@@ -520,7 +511,7 @@ const ontem = document.getElementById('ontem').addEventListener('click', functio
               yAxes: [{
                 scaleLabel: {
                   display: true,
-                  labelString: 'Potência (W)'
+                  labelString: 'Irradiância (W/m²)'
                 }
               }]
             },
@@ -534,7 +525,7 @@ const ontem = document.getElementById('ontem').addEventListener('click', functio
             labels: horas,
             datasets: [
               {
-                label: 'Inclinado',
+                label: 'Velocidade do Vento',
                 fill: false,
                 borderColor: 'lightblue',
                 backgroundColor: 'lightblue',
@@ -588,7 +579,6 @@ const dias7 = document.getElementById('7dias').addEventListener('click', functio
     })
     .then(data => {
       if (data) {
-        console.log(data[1]);
 
         let horas = [];
         let global = [];
@@ -611,7 +601,7 @@ const dias7 = document.getElementById('7dias').addEventListener('click', functio
             labels: horas,
             datasets: [
               {
-                label: 'Global',
+                label: 'Global Horizontal',
                 fill: false,
                 borderColor: 'orange',
                 backgroundColor: 'orange',
@@ -632,7 +622,7 @@ const dias7 = document.getElementById('7dias').addEventListener('click', functio
               yAxes: [{
                 scaleLabel: {
                   display: true,
-                  labelString: 'Potência (W)'
+                  labelString: 'Irradiância (W/m²)'
                 }
               }]
             },
@@ -682,7 +672,7 @@ const dias7 = document.getElementById('7dias').addEventListener('click', functio
             labels: horas,
             datasets: [
               {
-                label: 'Inclinado',
+                label: 'Plano Inclinado',
                 fill: false,
                 borderColor: 'red',
                 backgroundColor: 'red',
@@ -703,7 +693,7 @@ const dias7 = document.getElementById('7dias').addEventListener('click', functio
               yAxes: [{
                 scaleLabel: {
                   display: true,
-                  labelString: 'Potência (W)'
+                  labelString: 'Irradiância (W/m²)'
                 }
               }]
             },
@@ -717,7 +707,7 @@ const dias7 = document.getElementById('7dias').addEventListener('click', functio
             labels: horas,
             datasets: [
               {
-                label: 'Inclinado',
+                label: 'Velocidade do Vento',
                 fill: false,
                 borderColor: 'lightblue',
                 backgroundColor: 'lightblue',
@@ -762,7 +752,6 @@ const dias15 = document.getElementById('15dias').addEventListener('click', funct
   temperaturaGrafico.destroy()
   velocidadeGrafico.destroy()
 
-  console.log('teste')
   fetch('http://localhost:3000/query3')
     .then(response => {
       if (!response.ok) {
@@ -772,7 +761,6 @@ const dias15 = document.getElementById('15dias').addEventListener('click', funct
     })
     .then(data => {
       if (data) {
-        console.log(data[1]);
 
         let horas = [];
         let global = [];
@@ -794,7 +782,7 @@ const dias15 = document.getElementById('15dias').addEventListener('click', funct
             labels: horas,
             datasets: [
               {
-                label: 'Global',
+                label: 'Global Horizontal',
                 fill: false,
                 borderColor: 'orange',
                 backgroundColor: 'orange',
@@ -815,7 +803,7 @@ const dias15 = document.getElementById('15dias').addEventListener('click', funct
               yAxes: [{
                 scaleLabel: {
                   display: true,
-                  labelString: 'Potência (W)'
+                  labelString: 'Irradiância (W/m²)'
                 }
               }]
             },
@@ -900,7 +888,7 @@ const dias15 = document.getElementById('15dias').addEventListener('click', funct
             labels: horas,
             datasets: [
               {
-                label: 'Inclinado',
+                label: 'Plano Inclinado',
                 fill: false,
                 borderColor: 'red',
                 backgroundColor: 'red',
@@ -955,7 +943,6 @@ const procurar = document.getElementById('submit').addEventListener('click', fun
       })
       .then(data => {
         if (data) {
-          console.log(data[1]);
 
           let horas = [];
           let global = [];
@@ -974,15 +961,13 @@ const procurar = document.getElementById('submit').addEventListener('click', fun
             }
           }
 
-          console.log(global[2])
-
           globalGrafico = new Chart(globalChart, {
             type: 'line',
             data: {
               labels: horas,
               datasets: [
                 {
-                  label: 'Global',
+                  label: 'Global Horizontal',
                   fill: false,
                   borderColor: 'orange',
                   backgroundColor: 'orange',
@@ -1003,7 +988,7 @@ const procurar = document.getElementById('submit').addEventListener('click', fun
                 yAxes: [{
                   scaleLabel: {
                     display: true,
-                    labelString: 'Potência (W)'
+                    labelString: 'Irradiância (W/m²)'
                   }
                 }]
               },
@@ -1053,7 +1038,7 @@ const procurar = document.getElementById('submit').addEventListener('click', fun
               labels: horas,
               datasets: [
                 {
-                  label: 'Inclinado',
+                  label: 'Plano Inclinado',
                   fill: false,
                   borderColor: 'red',
                   backgroundColor: 'red',
@@ -1074,7 +1059,7 @@ const procurar = document.getElementById('submit').addEventListener('click', fun
                 yAxes: [{
                   scaleLabel: {
                     display: true,
-                    labelString: 'Potência (W)'
+                    labelString: 'Irradiância (W/m²)'
                   }
                 }]
               },
@@ -1088,7 +1073,7 @@ const procurar = document.getElementById('submit').addEventListener('click', fun
               labels: horas,
               datasets: [
                 {
-                  label: 'Inclinado',
+                  label: 'Velocidade do Vento',
                   fill: false,
                   borderColor: 'lightblue',
                   backgroundColor: 'lightblue',
