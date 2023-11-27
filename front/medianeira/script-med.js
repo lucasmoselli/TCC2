@@ -104,7 +104,7 @@ window.addEventListener('load', function () {
         });
 
         temperaturaGrafico = new Chart(temperaturaChart, {
-          type: 'line',
+          type: 'bar',
           data: {
             labels: horas,
             datasets: [
@@ -349,7 +349,7 @@ window.addEventListener('load', function () {
           }
         });
         chuvaGrafico = new Chart(chuvaChart, {
-          type: 'line',
+          type: 'bar',
           data: {
             labels: horas,
             datasets: [
@@ -478,7 +478,7 @@ const hoje = document.getElementById('hoje').addEventListener('click', function 
         });
 
         temperaturaGrafico = new Chart(temperaturaChart, {
-          type: 'line',
+          type: 'bar',
           data: {
             labels: horas,
             datasets: [
@@ -723,7 +723,7 @@ const hoje = document.getElementById('hoje').addEventListener('click', function 
           }
         });
         chuvaGrafico = new Chart(chuvaChart, {
-          type: 'line',
+          type: 'bar',
           data: {
             labels: horas,
             datasets: [
@@ -849,7 +849,7 @@ const ontem = document.getElementById('ontem').addEventListener('click', functio
         });
 
         temperaturaGrafico = new Chart(temperaturaChart, {
-          type: 'line',
+          type: 'bar',
           data: {
             labels: horas,
             datasets: [
@@ -1094,7 +1094,7 @@ const ontem = document.getElementById('ontem').addEventListener('click', functio
           }
         });
         chuvaGrafico = new Chart(chuvaChart, {
-          type: 'line',
+          type: 'bar',
           data: {
             labels: horas,
             datasets: [
@@ -1220,7 +1220,7 @@ const dias7 = document.getElementById('7dias').addEventListener('click', functio
         });
 
         temperaturaGrafico = new Chart(temperaturaChart, {
-          type: 'line',
+          type: 'bar',
           data: {
             labels: horas,
             datasets: [
@@ -1465,7 +1465,7 @@ const dias7 = document.getElementById('7dias').addEventListener('click', functio
           }
         });
         chuvaGrafico = new Chart(chuvaChart, {
-          type: 'line',
+          type: 'bar',
           data: {
             labels: horas,
             datasets: [
@@ -1591,7 +1591,7 @@ const dias15 = document.getElementById('15dias').addEventListener('click', funct
         });
 
         temperaturaGrafico = new Chart(temperaturaChart, {
-          type: 'line',
+          type: 'bar',
           data: {
             labels: horas,
             datasets: [
@@ -1836,7 +1836,7 @@ const dias15 = document.getElementById('15dias').addEventListener('click', funct
           }
         });
         chuvaGrafico = new Chart(chuvaChart, {
-          type: 'line',
+          type: 'bar',
           data: {
             labels: horas,
             datasets: [
@@ -1965,7 +1965,7 @@ const procurar = document.getElementById('submit').addEventListener('click', fun
           });
 
           temperaturaGrafico = new Chart(temperaturaChart, {
-            type: 'line',
+            type: 'bar',
             data: {
               labels: horas,
               datasets: [
@@ -2210,7 +2210,7 @@ const procurar = document.getElementById('submit').addEventListener('click', fun
             }
           });
           chuvaGrafico = new Chart(chuvaChart, {
-            type: 'line',
+            type: 'bar',
             data: {
               labels: horas,
               datasets: [
